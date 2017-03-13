@@ -1,0 +1,12 @@
+.site-header {
+  @include padding(null ($gutter / 2));
+  align-items: center;
+  background-color: $light-action-color;
+  background-image: linear-gradient(rgba($action-color, 0), rgba($action-color, 0.4));
+  box-shadow: 0 0 4px rgba($gray-9, 0.3), 0 4px 8px rgba($gray-9, 0.1), 0 8px 16px rgba($gray-9, 0.05);
+  color: $white;
+  display: flex;
+  height: $base-spacing * 4;
+  justify-content: flex-end;
+  position: relative;
+}

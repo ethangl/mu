@@ -1,0 +1,43 @@
+.kvp {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: $gutter;
+}
+
+.kvp-key {
+  flex: 1;
+}
+
+.kvp-value {
+  flex: 2;
+  margin-left: $large-spacing;
+}
+
+.kvp-action {
+  align-items: center;
+  display: flex;
+  flex-basis: $gutter;
+  justify-content: center;
+  margin-top: 6px;
+  opacity: 0.2;
+  transition: color $slow-transition, opacity $slow-transition;
+
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    @include size($base-spacing);
+  }
+}
+
+.kvp-delete:focus,
+.kvp-delete:hover {
+  color: $error-color;
+  opacity: 1;
+}

@@ -1,0 +1,40 @@
+.expand {
+  align-items: center;
+  display: flex;
+  flex: 0 0 $gutter;
+  flex-direction: column;
+  height: $base-spacing * 4;
+  justify-content: center;
+
+  &::before {
+    @include position(absolute, 0 0 0 null);
+    content: "";
+    width: 100%;
+  }
+
+  &.is-active {
+    &::before {
+      width: 0;
+    }
+
+    svg {
+      &:first-child {
+        transform: rotate(-180deg);
+      }
+
+      &:last-child {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  svg {
+    @include size($small-spacing);
+    opacity: 0.5;
+    transition: transform $bounce-transition;
+
+    &:last-child {
+      transform: rotate(180deg);
+    }
+  }
+}

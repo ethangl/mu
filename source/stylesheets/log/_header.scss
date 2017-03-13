@@ -1,0 +1,35 @@
+.log-header {
+  align-items: center;
+  background-color: $off-white;
+  box-shadow: $card-shadow;
+  display: flex;
+  height: $base-spacing * 5;
+  margin-top: 1px;
+  padding-left: $gutter;
+  position: relative;
+  transition: background $slow-transition;
+
+  .is-expanded > & {
+    background-color: $white;
+  }
+}
+
+.log-request {
+  flex: 1;
+  overflow: hidden;
+
+  h3 {
+    @include ellipsis;
+    font-size: $small-font-size;
+    font-weight: 400;
+    line-height: $base-spacing + $small-spacing;
+    opacity: 0.8;
+  }
+
+  h5 {
+    font-size: $xxs-font-size;
+    font-weight: 500;
+    line-height: $base-spacing;
+    opacity: 0.5;
+  }
+}

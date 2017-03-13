@@ -1,0 +1,17 @@
+li.app data-toggle="tabslet"
+  header.app-header
+    .app-status class="is-#{status}"
+    h2.app-title= domain
+    = partial "partials/expand", locals: { parent: ".app", children: ".tabs-content" }
+    ul.tabs-nav
+      li
+        = link_to "Log", "#log", class: "tabs-link"
+      li
+        = link_to "Configure", "#configure", class: "tabs-link"
+  .tabs-content
+    section#log
+      = partial "partials/app-log-filter"
+      - data.logs.each do |log|
+        = partial "partials/app-log", locals: { request: log.request, timestamp: log.timestamp, response: log.response }
+    section#configure
+      = partial "partials/app-config"

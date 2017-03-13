@@ -1,0 +1,11 @@
+- request: /celery?bangled=wren&vicious=earth&foppish=works
+  timestamp: 2016-04-08 15:04
+  response: 200
+
+- request: /celery?
+  timestamp: 2016-04-08 15:03
+  response: 500
+
+- request: /celery?
+  timestamp: 2016-04-08 15:02
+  response: 500

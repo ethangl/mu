@@ -1,0 +1,53 @@
+.log-filter {
+  @include position(absolute, null 0 100% null);
+  align-items: center;
+  animation: fade-in $slow-duration $base-duration both;
+  display: flex;
+  justify-content: flex-end;
+  height: $large-spacing;
+  padding-right: $gutter;
+
+  h6 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-right: $small-spacing;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  label {
+    margin-left: $base-spacing;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+}
+
+.log-filter-checkbox {
+  @include hide-text;
+  @include size($base-spacing - 6px);
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px $gray-1;
+  color: $gray-8;
+  cursor: pointer;
+  display: block;
+  margin: 1px;
+  opacity: 0.4;
+  transition: box-shadow $base-transition, opacity $base-transition;
+
+  :checked + & {
+    box-shadow: 0 0 0 3px $white, 0 0 0 4px currentColor;
+    opacity: 1;
+  }
+
+  &.success {
+    color: $success-color;
+  }
+
+  &.error {
+    color: $error-color;
+  }
+}

@@ -1,0 +1,8 @@
+.log
+  header.log-header
+    .log-request
+      h3 = request
+      h5 = timestamp
+    h6.log-status-code class="is-#{response}" = response
+    = partial "partials/expand", locals: { parent: ".log", children: ".log-content" }
+  = partial "partials/app-log-content"

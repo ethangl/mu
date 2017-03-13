@@ -1,0 +1,14 @@
+.rows {
+  @include padding($base-spacing null $large-spacing);
+  background-color: $off-white;
+  box-shadow: $card-shadow;
+  margin-top: 1px;
+}
+
+.row + .row {
+  margin-top: $large-spacing;
+}
+
+.rows-footer {
+  @include margin($large-spacing $gutter null);
+}

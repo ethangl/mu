@@ -1,0 +1,36 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+}
+
+.hr {
+  font-size: $xxs-font-size;
+  line-height: $base-spacing;
+  margin: $base-spacing 0;
+  opacity: 0.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

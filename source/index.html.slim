@@ -1,0 +1,9 @@
+---
+title: Your Mus – Mu
+---
+
+header.list-header Your Mus
+
+ol.apps-list
+  - data.apps.each do |app|
+    = partial "partials/app", locals: { domain: app.domain, status: app.status }

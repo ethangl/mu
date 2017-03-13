@@ -1,0 +1,61 @@
+// Breakpoints
+$small-screen: 375px;
+$medium-screen: 512px;
+$large-screen: 736px;
+
+// Typography
+$base-font-family: $font-stack-system;
+
+// Font Sizes
+$xl-font-size: 20px;
+$large-font-size: 17px;
+$base-font-size: 16px;
+$small-font-size: 14px;
+$xs-font-size: 12px;
+$xxs-font-size: 11px;
+
+// Other Sizes
+$base-spacing: $base-font-size;
+$large-spacing: $base-spacing * 2;
+$small-spacing: $base-spacing / 2;
+$gutter: $base-spacing * 3;
+$base-border-radius: 2px;
+$icon-size: 24px;
+
+// Grid
+$medium-width: $medium-screen - $large-spacing;
+$max-width: $large-screen - $large-spacing;
+
+// Colors
+$gray-0: #eceff1;
+$gray-1: #cfd8dc;
+$gray-8: #37474f;
+$gray-9: #263238;
+
+$github: #4078c0;
+
+$white: #fff;
+$off-white: mix($white, $gray-0, 60%);
+
+$base-font-color: $gray-8;
+$light-action-color: #ffb300;
+$action-color: #ffa000;
+$success-color: #66bb6a;
+$error-color: #ef5350;
+
+$base-border: 1px solid $gray-1;
+$base-background-color: $gray-0;
+
+// Animations
+$base-duration: 167ms;
+$slow-duration: 333ms;
+$base-transition: $base-duration $ease-in-out-cubic;
+$slow-transition: $slow-duration $ease-in-out-cubic;
+$bounce-transition: $slow-duration $ease-in-out-back;
+
+// Shadows
+$card-shadow: 0 4px 6px rgba($gray-9, 0.05), 0 0 2px rgba($gray-9, 0.05);
+$list-shadow: 0 1px rgba($gray-9, 0.1);
+
+// Z-index
+$site-header-z: 100;

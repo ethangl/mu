@@ -1,0 +1,11 @@
+.site-brand {
+  @include position(absolute, -0.25em 0 0);
+  @include size($large-spacing);
+  color: $white;
+  font-size: $large-spacing;
+  font-weight: 200;
+  line-height: 1;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0 2px $action-color;
+}

@@ -1,0 +1,14 @@
+form.rows
+  ul
+    li.row.kvp
+      input.kvp-key placeholder="Key" value="RACK_ENV"
+      input.kvp-value placeholder="Value" value="production"
+      button.kvp-action.kvp-delete
+        = svg "delete"
+    li.row.kvp
+      input.kvp-key placeholder="Key"
+      input.kvp-value placeholder="Value"
+      button.kvp-action.kvp-delete
+        = svg "delete"
+  footer.rows-footer
+    button.btn Save

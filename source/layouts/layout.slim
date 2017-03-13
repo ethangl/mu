@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title= current_page.data.title
+    = stylesheet_link_tag "all"
+  body
+    header.site-header
+      .site-brand &mu;
+      .site-account#account
+        = image_tag "avatar.jpg", class: "site-avatar", "data-toggle": "#account"
+        nav.site-account-nav
+          ul
+            li
+              = link_to "#", class: "site-account-link" do
+                span Settings
+                = svg "settings"
+            li
+              = link_to "#", class: "site-account-link" do
+                span Sign Out
+                = svg "sign-out"
+    main
+      = yield
+    = javascript_include_tag "all"
+    = yield_content :javascript

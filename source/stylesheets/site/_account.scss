@@ -1,0 +1,68 @@
+.site-account {
+  @include size(40px);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.site-account-nav {
+  @include position(absolute, 100% (-4px) null null);
+  animation: drop-out $bounce-transition both;
+  background-color: $white;
+  box-shadow: $card-shadow;
+  min-width: 200px;
+  margin-top: 12px;
+  transition: visibility 0s $base-duration;
+  visibility: hidden;
+
+  &::before {
+    @include position(absolute, null 20px 100% null);
+    @include triangle(up, $white, $small-spacing);
+    content: "";
+  }
+
+  .is-toggled & {
+    animation: drop-in $bounce-transition both;
+    visibility: visible;
+  }
+
+  li + li {
+    box-shadow: inset $list-shadow;
+  }
+}
+
+.site-account-link {
+  align-items: center;
+  color: $gray-8;
+  display: flex;
+  font-size: $small-font-size;
+  font-weight: 300;
+  line-height: $base-spacing;
+  justify-content: space-between;
+  padding: $base-spacing;
+
+  svg {
+    @include size($base-spacing);
+  }
+}
+
+.site-avatar {
+  background-color: rgba($white, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: box-shadow $bounce-transition, opacity $bounce-transition, transform $bounce-transition;
+  will-change: transform;
+
+  &:active {
+    box-shadow: 0 0 0 4px $action-color;
+    transform: scale(0.7);
+    transition: box-shadow $base-transition, transform $base-transition;
+  }
+
+  .is-toggled & {
+    box-shadow: 0 0 0 3px $white;
+    transform: scale(1);
+  }
+}

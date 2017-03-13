@@ -1,0 +1,13 @@
+.app-status {
+  @include margin(null ($base-spacing + ($small-spacing / 2)));
+  @include size(9px);
+  border-radius: 50%;
+
+  &.is-good {
+    background-color: $success-color;
+  }
+
+  &.is-bad {
+    background-color: $error-color;
+  }
+}

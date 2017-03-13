@@ -1,0 +1,30 @@
+.log-content
+  %h6
+    %u Request
+  %pre
+    :preserve
+      POST /blog/posts
+      Accept: application/json
+      Content-Type: application/json
+      Content-Length: 57
+
+      {
+        "title": "Hello World!",
+        "body": "This is my first post!",
+        "long_string": "The shopworn speedboat reveals itself as a forlorn hamburger to those who look."
+      }
+  %h6
+    %u Response
+  %pre
+    :preserve
+      HTTP/1.1 201 Created
+      Content-Type: application/json
+      Content-Length: 65
+      Connection: close
+
+      {
+        "id": "1",
+        "title": "Hello World!",
+        "body": "This is my first post!",
+        "long_string": "The shopworn speedboat reveals itself as a forlorn hamburger to those who look."
+      }
